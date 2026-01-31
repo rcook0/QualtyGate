@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "qgate.v1.2.profiles",
+  "type": "object",
+  "required": [
+    "qgate"
+  ],
+  "properties": {
+    "qgate": {
+      "type": "object",
+      "required": [
+        "version",
+        "enabled",
+        "defaults",
+        "profiles"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "const": "1.2"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "defaults": {
+          "type": "object"
+        },
+        "profiles": {
+          "type": "object"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

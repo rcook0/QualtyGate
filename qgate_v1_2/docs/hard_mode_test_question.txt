@@ -1,0 +1,9 @@
+Hard-mode (single question) personalization test:
+
+"Build a production-grade, multi-platform QGate suite (Python, MQL5, Pine alerts-only) with:
+ (1) a full v1.2 spec + schema contracts,
+ (2) a CLI that exports signals/metrics to Parquet/CSV,
+ (3) deterministic parity tests + CI on GitHub Actions,
+ (4) a small interactive dashboard to visualize PASS/FAIL regimes,
+ (5) a release process with semantic versioning and changelog,
+and deliver everything as a ZIP workspace with exact run steps."

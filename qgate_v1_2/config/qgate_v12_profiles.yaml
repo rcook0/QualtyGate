@@ -1,0 +1,72 @@
+qgate:
+  version: "1.2"
+  enabled: true
+
+  defaults:
+    atr:
+      period: 14
+      baseline_len: 50
+      ratio_ref: 1.25
+    er:
+      lookback: 20
+      ref: 0.35
+    tr:
+      ref_tr_atr: 1.00
+    adx:
+      enabled: true
+      period: 14
+      ref: 25.0
+
+    bands:
+      poor: 0.55
+      ok: 0.70
+      good: 0.85
+
+  profiles:
+    m5_m30:
+      ltf:
+        classification:
+          hysteresis: true
+          q_pass: 0.70
+          q_fail: 0.62
+        weights:
+          atr: 0.28
+          er: 0.28
+          tr: 0.14
+          adx: 0.30
+      htf:
+        timeframe: "M30"
+        classification:
+          hysteresis: true
+          q_pass: 0.72
+          q_fail: 0.68
+        weights:
+          atr: 0.30
+          er: 0.30
+          tr: 0.15
+          adx: 0.25
+      combine: "AND"
+
+    m15_h1:
+      ltf:
+        classification:
+          hysteresis: true
+          q_pass: 0.72
+          q_fail: 0.66
+        weights:
+          atr: 0.28
+          er: 0.28
+          tr: 0.14
+          adx: 0.30
+      htf:
+        timeframe: "H1"
+        classification:
+          hysteresis: true
+          q_pass: 0.75
+          q_fail: 0.70
+        weights:
+          atr: 0.30
+          er: 0.30
+          tr: 0.15
+          adx: 0.25
+      combine: "AND"
